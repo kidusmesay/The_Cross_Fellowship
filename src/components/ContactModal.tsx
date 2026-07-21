@@ -55,14 +55,38 @@ export default function ContactModal({
 
     setStatus("submitting");
 
-    // Simulate backend submission
+    // Translate interest labels for a clean email subject line
+    const interestLabel =
+      interest === "worship" ? "Worship & Praise Team" :
+      interest === "missions" ? "Community Missions & Outreach" :
+      interest === "both" ? "Worship & Missions Volunteer" : "General Inquiry / Testimony";
+
+    // Formulate a beautifully pre-filled direct message
+    const subject = encodeURIComponent(`The Cross Fellowship Contact: ${interestLabel}`);
+    const body = encodeURIComponent(
+      `Hello Cross Fellowship,\n\n` +
+      `You have received a new connection request via the website contact form:\n\n` +
+      `----------------------------------------\n` +
+      `Sender Name: ${name}\n` +
+      `Sender Email: ${email}\n` +
+      `Area of Interest: ${interestLabel}\n` +
+      `----------------------------------------\n\n` +
+      `Message:\n${message}\n\n` +
+      `Best regards,\n` +
+      `${name}`
+    );
+
+    const mailtoUrl = `mailto:kidusmesayt@gmail.com?subject=${subject}&body=${body}`;
+
+    // Gracefully redirect the user to trigger their mail app, then switch to the success confirmation screen
     setTimeout(() => {
+      window.location.href = mailtoUrl;
       setStatus("success");
       // Clear inputs
       setName("");
       setEmail("");
       setMessage("");
-    }, 1200);
+    }, 1000);
   };
 
   return (
