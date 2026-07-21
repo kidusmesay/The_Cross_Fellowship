@@ -1,0 +1,6 @@
+{
+  "name": "The Cross Fellowship",
+  "description": "A minimalistic and clean web application for The Cross Fellowship, featuring worship ministries, mission programs, rotated scriptures, bilingual toggle, and interactive connection features.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

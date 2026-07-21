@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #F9F9F7;
+  --color-brand-charcoal: #565656;
+  --color-brand-charcoal-dark: #3a3a3a;
+  --color-brand-charcoal-light: #707070;
+  --color-brand-maroon: #641E16;
+  --color-brand-maroon-hover: #82271d;
+  --color-brand-slate: #606060;
+  --color-slate-800: #606060;
+  --color-slate-900: #606060;
+  --color-slate-950: #606060;
+  --color-slate-700: #4d4d4d;
+  --font-serif: "Georgia", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
