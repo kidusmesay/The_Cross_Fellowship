@@ -136,6 +136,19 @@ export default function ContactModal({
                   {t.contactSub}
                 </p>
 
+                <div className="mt-4 p-3 rounded-md bg-slate-50 border border-slate-100 flex items-center justify-between gap-3 text-xs" id="direct-email-container">
+                  <span className="font-mono text-[10px] text-slate-400 uppercase tracking-widest font-bold">
+                    {language === "en" ? "Direct Email" : "ቀጥታ ኢሜይል"}
+                  </span>
+                  <a
+                    href="mailto:kidusmesayt@gmail.com"
+                    className="font-mono font-medium text-slate-700 hover:text-slate-950 transition duration-150 underline decoration-slate-300 hover:decoration-slate-800"
+                    id="direct-email-link"
+                  >
+                    kidusmesayt@gmail.com
+                  </a>
+                </div>
+
                 <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4">
                   {/* Name field */}
                   <div>
