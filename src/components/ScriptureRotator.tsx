@@ -45,17 +45,17 @@ export default function ScriptureRotator({ language }: ScriptureRotatorProps) {
     >
       {/* Delicate background decorations */}
       <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none select-none">
-        <Quote className="h-96 w-96 text-slate-100" />
+        <Quote className="h-96 w-96 text-[#0c3527]" />
       </div>
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Header Indicator */}
         <div className="mb-6 flex items-center justify-center gap-2">
-          <span className="h-px w-8 bg-slate-200" />
-          <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-slate-400 font-bold">
+          <span className="h-px w-8 bg-[#0c3527]/20" />
+          <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-[#0c3527] font-bold">
             {t.scripturesTitle}
           </span>
-          <span className="h-px w-8 bg-slate-200" />
+          <span className="h-px w-8 bg-[#0c3527]/20" />
         </div>
 
         {/* Rotator Text Panel */}
@@ -75,7 +75,7 @@ export default function ScriptureRotator({ language }: ScriptureRotatorProps) {
               </p>
 
               {/* Reference */}
-              <p className="mt-5 font-mono text-xs uppercase tracking-widest text-brand-maroon font-bold">
+              <p className="mt-5 font-mono text-xs uppercase tracking-widest text-[#0c3527] font-bold">
                 — {verses[index]?.reference || ""} —
               </p>
             </motion.div>
@@ -86,7 +86,7 @@ export default function ScriptureRotator({ language }: ScriptureRotatorProps) {
         <div className="mt-10 flex items-center justify-center gap-4" id="scripture-carousel-controls">
           <button
             onClick={handlePrev}
-            className="rounded-sm p-2.5 border border-slate-200 bg-slate-50 text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition duration-150"
+            className="rounded-sm p-2.5 border border-slate-200 bg-slate-50 text-slate-500 hover:text-[#0c3527] hover:border-[#0c3527]/30 hover:bg-emerald-50/50 transition duration-150 cursor-pointer"
             id="scripture-prev-btn"
             title={language === "en" ? "Previous verse" : "ያለፈው ጥቅስ"}
           >
@@ -96,7 +96,7 @@ export default function ScriptureRotator({ language }: ScriptureRotatorProps) {
           {/* Autoplay Pause Toggle */}
           <button
             onClick={() => setIsPlaying(!isPlaying)}
-            className="rounded-sm p-2 border border-slate-200 bg-slate-50 text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition duration-150"
+            className="rounded-sm p-2 border border-slate-200 bg-slate-50 text-slate-500 hover:text-[#0c3527] hover:border-[#0c3527]/30 hover:bg-emerald-50/50 transition duration-150 cursor-pointer"
             id="scripture-play-pause-btn"
             title={isPlaying ? "Pause autoplay" : "Resume autoplay"}
           >
@@ -105,7 +105,7 @@ export default function ScriptureRotator({ language }: ScriptureRotatorProps) {
 
           <button
             onClick={handleNext}
-            className="rounded-sm p-2.5 border border-slate-200 bg-slate-50 text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition duration-150"
+            className="rounded-sm p-2.5 border border-slate-200 bg-slate-50 text-slate-500 hover:text-[#0c3527] hover:border-[#0c3527]/30 hover:bg-emerald-50/50 transition duration-150 cursor-pointer"
             id="scripture-next-btn"
             title={language === "en" ? "Next verse" : "የሚቀጥለው ጥቅስ"}
           >
@@ -120,7 +120,7 @@ export default function ScriptureRotator({ language }: ScriptureRotatorProps) {
               key={i}
               onClick={() => setIndex(i)}
               className={`h-1.5 rounded-sm transition-all duration-300 ${
-                i === index ? "w-6 bg-brand-maroon" : "w-1.5 bg-slate-200 hover:bg-slate-300"
+                i === index ? "w-6 bg-gradient-to-r from-[#0c3527] to-[#134937]" : "w-1.5 bg-slate-200 hover:bg-[#0c3527]/30"
               }`}
               id={`scripture-pag-dot-${i}`}
               title={`Go to verse ${i + 1}`}

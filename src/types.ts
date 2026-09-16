@@ -58,7 +58,7 @@ export const translations: Record<Language, TranslationSet> = {
     missionTitle: "Outreach & Mission Team",
     missionDesc: "We believe in being the hands and feet of Jesus. Our mission team focuses on impactful local community outreach (food programs, homeless care, youth ministries) as well as global missions to share hope and practical aid. Join us as we serve, build connections, and share love in action.",
     scripturesTitle: "Scripture of the Day",
-    footerQuote: "\"For where two or three gather in my name, there am I with them.\" - Matthew 18:20",
+    footerQuote: "\"For to me, to live is Christ!\" - Philippians 1:21",
     contactHeader: "Connect With Us",
     contactSub: "We would love to welcome you, answer your questions, or pray with you. Let us know how you would like to get involved!",
     formName: "Full Name",
@@ -92,7 +92,7 @@ export const translations: Record<Language, TranslationSet> = {
     missionTitle: "የስርጭት እና የሚሲዮን ቡድን",
     missionDesc: "የኢየሱስ እጆች እና እግሮች በመሆን እናምናለን። የሚሲዮን ቡድናችን ትኩረቱን በአካባቢው ማህበረሰብ አገልግሎት (የምግብ እርዳታ፣ ቤት አልባዎችን መርዳት፣ የወጣቶች አገልግሎት) እንዲሁም ዓለም አቀፍ ሚሲዮኖች ላይ በማድረግ ተስፋን እና ተግባራዊ እርዳታን ያካፍላል። በተግባር ፍቅርን ለማሳየት አብረውን ያገልግሉ።",
     scripturesTitle: "የዕለቱ ጥቅስ",
-    footerQuote: "\"ሁለት ወይም ሦስት በስሜ በሚሰበሰቡበት በዚያ በመካከላቸው እሆናለሁና።\" — ማቴዎስ ፲፰:፳",
+    footerQuote: "\"ለእኔ ሕይወት ክርስቶስ ነውና!\" — ፊልጵስዩስ ፩:፳፩",
     contactHeader: "ከእኛ ጋር ይገናኙ",
     contactSub: "እርስዎን ለመቀበል፣ ጥያቄዎችዎን ለመመለስ ወይም አብረንዎት ለመጸለይ ደስተኞች ነን። እንዴት መሳተፍ እንደሚፈልጉ ያሳውቁን!",
     formName: "ሙሉ ስም",
@@ -160,7 +160,12 @@ export const galleryItems = (
   bibleStudyImg: string,
   youthImg: string,
   prayerImg: string,
-  coffeeImg: string
+  coffeeImg: string,
+  bImg?: string,
+  cImg?: string,
+  dImg?: string,
+  main4Img?: string,
+  gal2Recap?: string[]
 ): GalleryItem[] => [
   {
     id: "gal-1",
@@ -168,52 +173,57 @@ export const galleryItems = (
     date: "2026-07-19",
     formattedDateEn: "July 19, 2026",
     formattedDateAm: "ሐምሌ ፲፪ ቀን ፪፲፲፰ ዓ.ም",
-    titleEn: "Sunday Morning Praise & Worship",
-    titleAm: "የእሁድ ጠዋት ምስጋና እና አምልኮ",
-    descEn: "A powerful morning of worship led by the praise team. The sermon focused on 'Living a Crucified Life' from Galatians 2:20, exploring how our daily walk reflects the love of Christ.",
-    descAm: "በአምልኮ ቡድኑ የተመራ ታላቅ የጠዋት አምልኮ። ስብከቱ በገላትያ ፪:፳ ላይ በመመስረት 'የተሰቀለ ሕይወትን መኖር' በሚል ርዕስ ያተኮረ ሲሆን፣ የእለት ተእለት አካሄዳችን የክርስቶስን ፍቅር እንዴት እንደሚያንጸባርቅ ዳስሷል።",
+    titleEn: "Welcome Program",
+    titleAm: "የእንኳን ደህና መጡ ፕሮግራም",
+    descEn: "Our welcome program was held at IEC, and it was truly an amazing first day with our family. We are grateful for the opportunity to gather, connect, and start this journey together.",
+    descAm: "የእንኳን ደህና መጡ ፕሮግራማችን በIEC የተካሄደ ሲሆን፣ ከቤተሰባችን ጋር በእውነት አስደናቂ የመጀመሪያ ቀን ነበር። አብረን ለመሰብሰብ፣ ለመገናኘት እና ይህንን ጉዞ በጋራ ለመጀመር ባገኘነው ዕድል እጅግ አመስጋኞች ነን።",
     categoryEn: "Sunday Service",
     categoryAm: "የእሁድ አገልግሎት",
     scriptureRefEn: "Galatians 2:20",
     scriptureRefAm: "ገላትያ ፪:፳",
     highlightsEn: [
-      "Led full congregation in 5 contemporary and traditional praise songs",
-      "Sermon on spiritual renewal and devotion",
-      "Over 120 community members gathered in fellowship"
+      "We began with a brief introduction to the fellowship’s vision and mission",
+      "Followed by a time of fellowship and connection",
+      "Plans and upcoming activities were also shared"
     ],
     highlightsAm: [
-      "ሙሉውን ጉባኤ በ፭ ዘመናዊ እና ባህላዊ የምስጋና መዝሙሮች መርተዋል",
-      "በመንፈሳዊ መታደስ እና ራስን ለእግዚአብሔር በመስጠት ላይ ያተኮረ ስብከት",
-      "ከ፻፳ በላይ የማህበረሰብ አባላት በሕብረት ተሰብስበዋል"
+      "ስለ ሕብረቱ ራዕይ እና ተልዕኮ አጭር መግቢያ በማቅረብ ጀመርን",
+      "በመቀጠል የሕብረት እና የእርስ በእርስ ትውውቅ ጊዜ ተካሂዷል",
+      "እቅዶች እና መጪ እንቅስቃሴዎችም ተጋርተዋል"
     ],
-    recapImages: [worshipImg, prayerImg, coffeeImg]
+    recapImages: [worshipImg, bImg || worshipImg, cImg || worshipImg, dImg || worshipImg]
   },
   {
     id: "gal-2",
-    imagePath: missionImg,
+    imagePath: main4Img || missionImg,
     date: "2026-07-11",
     formattedDateEn: "July 11, 2026",
     formattedDateAm: "ሐምሌ ፬ ቀን ፪፲፲፰ ዓ.ም",
-    titleEn: "Community Food Drive & Outreach",
-    titleAm: "የማህበረሰብ ምግብ ማዕድ እና አገልግሎት",
-    descEn: "Our mission team took to the streets to distribute over 80 warm meals, clean hygiene kits, and offer prayer and comforting conversations to our local unhoused neighbors.",
-    descAm: "የሚሲዮን ቡድናችን ከ፹ በላይ ትኩስ ምግቦችን፣ የንፅህና መጠበቂያ ቁሳቁሶችን ለማሰራጨት እና ለአካባቢያችን ቤት አልባ ጎረቤቶች ጸሎትና የምቾት ውይይቶችን ለማቅረብ ወደ ጎዳና ወጥቷል።",
-    categoryEn: "Outreach & Mission",
-    categoryAm: "ስርጭት እና ሚሲዮን",
+    titleEn: "New year celebration/2019",
+    titleAm: "የአዲስ ዓመት በዓል አከባበር / ፪፲፲፱",
+    descEn: "We celebrated the Ethiopian New Year as a family and marked a major milestone for the fellowship. It was a joyful occasion filled with amazing worship, fellowship, and meaningful time together.",
+    descAm: "የኢትዮጵያን አዲስ ዓመት እንደ አንድ ቤተሰብ አብረን ያከበርን ሲሆን፣ ለሕብረታችን ትልቅ ምዕራፍ አስመዝግቧል። በአስደናቂ አምልኮ፣ በሕብረት እና ትርጉም ባለው የጋራ ጊዜ የተሞላ አስደሳች በዓል ነበር።",
+    categoryEn: "Praise & Worship",
+    categoryAm: "ምስጋና እና አምልኮ",
     scriptureRefEn: "Matthew 25:40",
     scriptureRefAm: "ማቴዎስ ፳፭:፵",
     highlightsEn: [
-      "Distributed 80+ warm nutritious meals and care packages",
-      "Engaged in 1-on-1 counseling and prayer sessions with 30+ individuals",
-      "Partnered with local shelters for follow-up care"
+      "We welcomed the Ethiopian New Year together as a family",
+      "The day was blessed with uplifting worship, joyful fellowship"
     ],
     highlightsAm: [
-      "፹+ ትኩስ ገንቢ ምግቦችን እና የእንክብካቤ ጥቅሎችን አሰራጭተዋል",
-      "ከ፴+ በላይ ግለሰቦች ጋር የአንድ ለአንድ የምክር እና የጸሎት ጊዜያት አሳልፈዋል",
-      "ለቀጣይ እንክብካቤ ከአካባቢው መጠለያዎች ጋር አጋርነት ፈጥረዋል"
+      "የኢትዮጵያን አዲስ ዓመት እንደ አንድ ቤተሰብ አብረን ተቀበልን",
+      "ቀኑ በሚያነቃቃ አምልኮ እና አስደሳች ሕብረት የተባረከ ነበር"
     ],
-    recapImages: [missionImg, prayerImg, coffeeImg]
-  },
+    recapImages: gal2Recap && gal2Recap.length > 0 ? gal2Recap : [main4Img || missionImg, prayerImg, coffeeImg]
+  }
+  /*
+  // ============================================================================
+  // TEMPORARILY DISABLED CARDS (gal-3 and gal-4)
+  // Location: src/types.ts (around lines 224-278)
+  // To re-enable: Simply remove the opening "/*" and closing "* /" comment markers.
+  // ============================================================================
+  ,
   {
     id: "gal-3",
     imagePath: bibleStudyImg,
@@ -266,4 +276,5 @@ export const galleryItems = (
     ],
     recapImages: [youthImg, prayerImg, coffeeImg]
   }
+  */
 ];

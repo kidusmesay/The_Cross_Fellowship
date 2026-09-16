@@ -9,8 +9,8 @@ import { Music, MapPin, Sparkles, Heart } from "lucide-react";
 import { Language, translations } from "../types";
 
 // Import the generated images directly for high visual quality
-import worshipImg from "../assets/images/worship_team_photo_1781712491371.jpg";
-import missionImg from "../assets/images/mission_team_photo_1781712507579.jpg";
+import worshipImg from "../assets/images/new.png";
+import missionImg from "../assets/images/b.jpg";
 
 interface WingsProps {
   language: Language;
@@ -30,10 +30,10 @@ export default function Wings({ language, onOpenContact }: WingsProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-sm bg-white text-slate-600 border border-slate-200/80 mb-4"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-sm bg-white text-slate-700 border border-[#0c3527]/15 mb-4 shadow-3xs"
           >
-            <Sparkles className="h-4 w-4 text-amber-600" />
-            <span className="font-mono text-[10px] uppercase font-bold tracking-wider">
+            <Sparkles className="h-4 w-4 text-[#c89b4a]" />
+            <span className="font-mono text-[10px] uppercase font-bold tracking-wider text-[#0c3527]">
               {language === "en" ? "Wings of Ministry" : "የአአገልግሎት ክንፎች"}
             </span>
           </motion.div>
@@ -42,7 +42,7 @@ export default function Wings({ language, onOpenContact }: WingsProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="font-serif font-light text-3xl sm:text-5xl tracking-tight text-slate-900"
+            className="font-serif font-light text-3xl sm:text-5xl tracking-tight text-[#08261c]"
             id="wings-section-title"
           >
             {language === "en" ? "Two Wings, One Spirit" : "ሁለት ክንፎች፣ አንድ መንፈስ"}
@@ -68,11 +68,11 @@ export default function Wings({ language, onOpenContact }: WingsProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, type: "spring", bounce: 0.1 }}
-            className="flex flex-col bg-white rounded-xl overflow-hidden shadow-xs hover:shadow-lg hover:border-slate-300/80 border border-slate-200 transition-all duration-300 group"
+            className="flex flex-col bg-white rounded-xl overflow-hidden shadow-xs hover:shadow-lg hover:border-[#0c3527]/30 border border-slate-200 transition-all duration-300 group"
             id="wing-worship-card"
           >
-            {/* Top Indicator Accent Line */}
-            <div className="h-2 bg-slate-800 group-hover:bg-indigo-900 transition-colors" />
+            {/* Top Indicator Accent Line with complementary gradient */}
+            <div className="h-2 bg-gradient-to-r from-[#0c3527] via-[#1b6349] to-[#c89b4a]" />
 
             {/* Image Block */}
             <div className="relative aspect-video w-full overflow-hidden bg-slate-50">
@@ -83,9 +83,9 @@ export default function Wings({ language, onOpenContact }: WingsProps) {
                 className="h-full w-full object-cover object-center transform group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-slate-950/15" />
-              <div className="absolute top-4 left-4 rounded-sm bg-slate-900/95 backdrop-blur-xs px-3.5 py-1.5 flex items-center gap-2 text-white shadow-md">
-                <Music className="h-4 w-4 text-indigo-300" />
+              <div className="absolute inset-0 bg-[#072118]/20" />
+              <div className="absolute top-4 left-4 rounded-sm bg-gradient-to-r from-[#0c3527]/95 to-[#134937]/95 backdrop-blur-xs px-3.5 py-1.5 flex items-center gap-2 text-white shadow-md border border-amber-300/25">
+                <Music className="h-4 w-4 text-amber-300" />
                 <span className="font-mono text-[10px] font-bold tracking-wider uppercase">
                   {language === "en" ? "Singers" : "ዘማሪዎች"}
                 </span>
@@ -96,8 +96,8 @@ export default function Wings({ language, onOpenContact }: WingsProps) {
             <div className="flex-1 p-8 sm:p-10 flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2.5 text-slate-400 mb-3 block">
-                  <span className="h-px w-6 bg-slate-200 inline-block align-middle mr-2" />
-                  <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-slate-500">
+                  <span className="h-px w-6 bg-[#0c3527]/30 inline-block align-middle mr-2" />
+                  <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-[#0c3527]">
                     {language === "en" ? "Ministry Inward" : "ውስጣዊ አገልግሎት"}
                   </span>
                 </div>
@@ -111,7 +111,7 @@ export default function Wings({ language, onOpenContact }: WingsProps) {
 
               <div className="pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="flex items-center gap-2.5 text-xs text-slate-400 font-medium">
-                  <Music className="h-4 w-4 text-slate-500" />
+                  <Music className="h-4 w-4 text-[#0c3527]" />
                   <span>
                     {language === "en"
                       ? "Acoustic / Contemporary / Traditional"
@@ -120,7 +120,7 @@ export default function Wings({ language, onOpenContact }: WingsProps) {
                 </div>
                 <button
                   onClick={() => onOpenContact("worship")}
-                  className="w-full sm:w-auto px-6 py-3 border-2 border-slate-800 text-slate-800 font-semibold text-sm rounded-sm hover:bg-slate-800 hover:text-white transition-all cursor-pointer text-center"
+                  className="w-full sm:w-auto px-6 py-3 border-2 border-[#0c3527] text-[#0c3527] font-semibold text-sm rounded-sm hover:bg-gradient-to-r hover:from-[#0c3527] hover:to-[#16533e] hover:text-white hover:border-transparent transition-all cursor-pointer text-center shadow-xs"
                   id="join-worship-btn"
                 >
                   {t.joinButton}
@@ -135,11 +135,11 @@ export default function Wings({ language, onOpenContact }: WingsProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.15, type: "spring", bounce: 0.1 }}
-            className="flex flex-col bg-white rounded-xl overflow-hidden shadow-xs hover:shadow-lg hover:border-slate-300/80 border border-slate-200 transition-all duration-300 group"
+            className="flex flex-col bg-white rounded-xl overflow-hidden shadow-xs hover:shadow-lg hover:border-[#c89b4a]/40 border border-slate-200 transition-all duration-300 group"
             id="wing-missions-card"
           >
-            {/* Top Indicator Accent Line */}
-            <div className="h-2 bg-brand-maroon group-hover:bg-brand-maroon-hover transition-colors" />
+            {/* Top Indicator Accent Line with complementary gradient */}
+            <div className="h-2 bg-gradient-to-r from-[#c89b4a] via-[#dfb66e] to-[#0c3527]" />
 
             {/* Image Block */}
             <div className="relative aspect-video w-full overflow-hidden bg-slate-50">
@@ -150,9 +150,9 @@ export default function Wings({ language, onOpenContact }: WingsProps) {
                 className="h-full w-full object-cover object-center transform group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-slate-950/15" />
-              <div className="absolute top-4 left-4 rounded-sm bg-slate-900/95 backdrop-blur-xs px-3.5 py-1.5 flex items-center gap-2 text-white shadow-md">
-                <MapPin className="h-4 w-4 text-rose-300" />
+              <div className="absolute inset-0 bg-[#072118]/20" />
+              <div className="absolute top-4 left-4 rounded-sm bg-gradient-to-r from-[#0c3527]/95 to-[#134937]/95 backdrop-blur-xs px-3.5 py-1.5 flex items-center gap-2 text-white shadow-md border border-amber-300/25">
+                <MapPin className="h-4 w-4 text-amber-300" />
                 <span className="font-mono text-[10px] font-bold tracking-wider uppercase">
                   {language === "en" ? "Missions" : "ተልዕኮ"}
                 </span>
@@ -163,8 +163,8 @@ export default function Wings({ language, onOpenContact }: WingsProps) {
             <div className="flex-1 p-8 sm:p-10 flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2.5 text-slate-400 mb-3 block">
-                  <span className="h-px w-6 bg-slate-200 inline-block align-middle mr-2" />
-                  <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-slate-500">
+                  <span className="h-px w-6 bg-[#c89b4a]/50 inline-block align-middle mr-2" />
+                  <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-[#9e752b]">
                     {language === "en" ? "Ministry Outward" : "ውጫዊ አገልግሎት"}
                   </span>
                 </div>
@@ -178,7 +178,7 @@ export default function Wings({ language, onOpenContact }: WingsProps) {
 
               <div className="pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="flex items-center gap-2.5 text-xs text-slate-400 font-medium">
-                  <Heart className="h-4 w-4 text-brand-maroon/80" />
+                  <Heart className="h-4 w-4 text-[#c89b4a]" />
                   <span>
                     {language === "en"
                       ? "Local Outreach & Global Campaigns"
@@ -187,7 +187,7 @@ export default function Wings({ language, onOpenContact }: WingsProps) {
                 </div>
                 <button
                   onClick={() => onOpenContact("missions")}
-                  className="w-full sm:w-auto px-6 py-3 border-2 border-brand-maroon text-brand-maroon font-semibold text-sm rounded-sm hover:bg-brand-maroon hover:text-white transition-all cursor-pointer text-center"
+                  className="w-full sm:w-auto px-6 py-3 border-2 border-[#c89b4a] text-[#0c3527] font-semibold text-sm rounded-sm hover:bg-gradient-to-r hover:from-[#c89b4a] hover:to-[#dfb66e] hover:text-[#072118] hover:border-transparent transition-all cursor-pointer text-center shadow-xs"
                   id="join-missions-btn"
                 >
                   {t.joinButton}

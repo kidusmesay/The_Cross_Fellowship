@@ -116,14 +116,9 @@ export default function App() {
           <div className="w-16 h-px bg-slate-200 mx-auto mb-8" />
 
           {/* Copyright details */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono tracking-wider uppercase text-slate-400 max-w-4xl mx-auto">
+          <div className="flex items-center justify-center text-xs font-mono tracking-wider uppercase text-slate-400 max-w-4xl mx-auto">
             <span>
               &copy; {new Date().getFullYear()} {t.brandName}.
-            </span>
-            <span>
-              {language === "en"
-                ? "Sola Gratia • Soli Deo Gloria"
-                : "በጸጋ ብቻ • ለስሙ ክብር ይሁን"}
             </span>
           </div>
         </div>

@@ -133,10 +133,10 @@ export default function ContactModal({
                 className="flex flex-col items-center justify-center py-12 text-center"
                 id="success-message-container"
               >
-                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-sm bg-emerald-50 text-emerald-600">
+                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-sm bg-emerald-50 text-[#0c3527] border border-[#0c3527]/20 shadow-xs">
                   <Check className="h-7 w-7 stroke-[3px]" />
                 </div>
-                <h3 className="mb-2 font-serif font-light text-2xl text-slate-900">
+                <h3 className="mb-2 font-serif font-light text-2xl text-[#08261c]">
                   {language === "en" ? "Connection Sent!" : "የመገናኛ መልዕክት ተልኳል!"}
                 </h3>
                 <p className="max-w-xs text-sm text-slate-500 font-light leading-relaxed">
@@ -144,7 +144,7 @@ export default function ContactModal({
                 </p>
                 <button
                   onClick={onClose}
-                  className="mt-8 rounded-sm bg-slate-800 px-6 py-2.5 text-sm font-medium text-white shadow-xs hover:bg-slate-700 transition duration-200 cursor-pointer"
+                  className="mt-8 rounded-sm bg-gradient-to-r from-[#0c3527] to-[#134937] hover:from-[#134937] hover:to-[#1a5e47] px-6 py-2.5 text-sm font-medium text-white shadow-xs transition duration-200 cursor-pointer"
                   id="success-close-btn"
                 >
                   {language === "en" ? "Close Window" : "መስኮቱን ዝጋ"}
@@ -153,20 +153,20 @@ export default function ContactModal({
             ) : (
               // Contact Form
               <div id="contact-form-container">
-                <h2 className="font-serif font-light text-2xl tracking-tight text-slate-900 pr-8">
+                <h2 className="font-serif font-light text-2xl tracking-tight text-[#08261c] pr-8">
                   {t.contactHeader}
                 </h2>
                 <p className="mt-2 text-sm text-slate-500 font-light leading-relaxed">
                   {t.contactSub}
                 </p>
 
-                <div className="mt-4 p-3 rounded-md bg-slate-50 border border-slate-100 flex items-center justify-between gap-3 text-xs" id="direct-email-container">
-                  <span className="font-mono text-[10px] text-slate-400 uppercase tracking-widest font-bold">
+                <div className="mt-4 p-3 rounded-md bg-emerald-50/50 border border-[#0c3527]/15 flex items-center justify-between gap-3 text-xs" id="direct-email-container">
+                  <span className="font-mono text-[10px] text-[#0c3527] uppercase tracking-widest font-bold">
                     {language === "en" ? "Direct Email" : "ቀጥታ ኢሜይል"}
                   </span>
                   <a
                     href="mailto:kidusmesayt@gmail.com"
-                    className="font-mono font-medium text-slate-700 hover:text-slate-950 transition duration-150 underline decoration-slate-300 hover:decoration-slate-800"
+                    className="font-mono font-medium text-[#0c3527] hover:text-[#134937] transition duration-150 underline decoration-[#0c3527]/30 hover:decoration-[#0c3527]"
                     id="direct-email-link"
                   >
                     kidusmesayt@gmail.com
@@ -181,7 +181,7 @@ export default function ContactModal({
                     </label>
                     <input
                       type="text"
-                      className="w-full rounded-sm border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-800 placeholder-slate-400 focus:bg-white focus:border-slate-400 focus:outline-hidden transition"
+                      className="w-full rounded-sm border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-800 placeholder-slate-400 focus:bg-white focus:border-[#0c3527] focus:ring-1 focus:ring-[#0c3527] focus:outline-hidden transition"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder={language === "en" ? "e.g. Sarah Jenkins" : "ምሳሌ፡ ሳራ ጄንኪንስ"}
@@ -197,7 +197,7 @@ export default function ContactModal({
                     </label>
                     <input
                       type="email"
-                      className="w-full rounded-sm border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-800 placeholder-slate-400 focus:bg-white focus:border-slate-400 focus:outline-hidden transition"
+                      className="w-full rounded-sm border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-800 placeholder-slate-400 focus:bg-white focus:border-[#0c3527] focus:ring-1 focus:ring-[#0c3527] focus:outline-hidden transition"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="sarah@example.com"
@@ -212,7 +212,7 @@ export default function ContactModal({
                       {t.formInterest}
                     </label>
                     <select
-                      className="w-full rounded-sm border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-800 focus:bg-white focus:border-slate-400 focus:outline-hidden transition appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2364748b%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095a17.6%2017.6%200%200%200%205.4-12.8c0-5-1.8-9.3-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E')] bg-[length:10px] bg-[right_1.25rem_center] bg-no-repeat cursor-pointer"
+                      className="w-full rounded-sm border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-800 focus:bg-white focus:border-[#0c3527] focus:ring-1 focus:ring-[#0c3527] focus:outline-hidden transition appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%230c3527%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095a17.6%2017.6%200%200%200%205.4-12.8c0-5-1.8-9.3-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E')] bg-[length:10px] bg-[right_1.25rem_center] bg-no-repeat cursor-pointer"
                       value={interest}
                       onChange={(e) => setInterest(e.target.value as any)}
                       id="input-interest"
@@ -231,7 +231,7 @@ export default function ContactModal({
                     </label>
                     <textarea
                       rows={3}
-                      className="w-full rounded-sm border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-800 placeholder-slate-400 focus:bg-white focus:border-slate-400 focus:outline-hidden transition resize-none"
+                      className="w-full rounded-sm border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-800 placeholder-slate-400 focus:bg-white focus:border-[#0c3527] focus:ring-1 focus:ring-[#0c3527] focus:outline-hidden transition resize-none"
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
                       placeholder={
@@ -259,7 +259,7 @@ export default function ContactModal({
                   <button
                     type="submit"
                     disabled={status === "submitting"}
-                    className="mt-2 w-full rounded-sm bg-slate-800 py-3 text-sm font-semibold text-white hover:bg-slate-700 transition disabled:opacity-50 flex items-center justify-center cursor-pointer shadow-sm"
+                    className="mt-2 w-full rounded-sm bg-gradient-to-r from-[#0c3527] via-[#134937] to-[#0c3527] hover:from-[#134937] hover:to-[#1a5e47] py-3 text-sm font-semibold text-white transition disabled:opacity-50 flex items-center justify-center cursor-pointer shadow-xs"
                     id="submit-modal-btn"
                   >
                     {status === "submitting" ? (

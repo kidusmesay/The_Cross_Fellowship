@@ -92,7 +92,7 @@ export default function Header({ language, setLanguage, onOpenContact, currentPa
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         shouldBeSolid
-          ? "bg-white/95 backdrop-blur-md shadow-xs border-b border-slate-200/80 py-3"
+          ? "bg-white/95 backdrop-blur-md shadow-xs border-b border-[#0c3527]/10 py-3"
           : "bg-transparent py-5"
       }`}
       id="main-app-header"
@@ -114,7 +114,7 @@ export default function Header({ language, setLanguage, onOpenContact, currentPa
               onClick={navigateToHome}
               className={`font-sans text-sm font-medium transition cursor-pointer ${
                 shouldBeSolid
-                  ? "text-slate-600 hover:text-slate-900"
+                  ? "text-slate-700 hover:text-[#0c3527]"
                   : "text-white/90 hover:text-white"
               }`}
             >
@@ -124,7 +124,7 @@ export default function Header({ language, setLanguage, onOpenContact, currentPa
               onClick={() => scrollToSection("ministries")}
               className={`font-sans text-sm font-medium transition cursor-pointer ${
                 shouldBeSolid
-                  ? "text-slate-600 hover:text-slate-900"
+                  ? "text-slate-700 hover:text-[#0c3527]"
                   : "text-white/90 hover:text-white"
               }`}
             >
@@ -134,7 +134,7 @@ export default function Header({ language, setLanguage, onOpenContact, currentPa
               onClick={() => scrollToSection("scriptures")}
               className={`font-sans text-sm font-medium transition cursor-pointer ${
                 shouldBeSolid
-                  ? "text-slate-600 hover:text-slate-900"
+                  ? "text-slate-700 hover:text-[#0c3527]"
                   : "text-white/90 hover:text-white"
               }`}
             >
@@ -144,7 +144,7 @@ export default function Header({ language, setLanguage, onOpenContact, currentPa
               onClick={navigateToActivities}
               className={`font-sans text-sm font-medium transition cursor-pointer ${
                 shouldBeSolid
-                  ? "text-slate-600 hover:text-slate-900"
+                  ? "text-slate-700 hover:text-[#0c3527]"
                   : "text-white/90 hover:text-white"
               }`}
             >
@@ -155,12 +155,12 @@ export default function Header({ language, setLanguage, onOpenContact, currentPa
             <div className={`flex items-center gap-1.5 border-l pl-6 ml-2 ${
               shouldBeSolid ? "border-slate-200" : "border-white/20"
             }`}>
-              <Globe className={`h-4 w-4 ${shouldBeSolid ? "text-slate-400" : "text-white/70"}`} />
+              <Globe className={`h-4 w-4 ${shouldBeSolid ? "text-[#0c3527]/70" : "text-white/70"}`} />
               <button
                 onClick={() => setLanguage(language === "en" ? "am" : "en")}
                 className={`font-sans text-xs font-semibold uppercase px-2 py-1 rounded-sm transition cursor-pointer ${
                   shouldBeSolid
-                    ? "text-slate-500 hover:text-slate-900 hover:bg-slate-100"
+                    ? "text-slate-600 hover:text-[#0c3527] hover:bg-[#0c3527]/5"
                     : "text-white/90 hover:text-white hover:bg-white/10"
                 }`}
                 id="language-toggle-btn"
@@ -175,8 +175,8 @@ export default function Header({ language, setLanguage, onOpenContact, currentPa
               onClick={() => onOpenContact("other")}
               className={`rounded-sm px-5 py-2 text-sm font-semibold transition shadow-sm cursor-pointer ${
                 shouldBeSolid
-                  ? "bg-slate-800 text-white hover:bg-slate-700"
-                  : "bg-white text-slate-900 hover:bg-slate-100"
+                  ? "bg-gradient-to-r from-[#0c3527] via-[#134937] to-[#0c3527] text-white hover:from-[#134937] hover:to-[#1a5e47] shadow-[#0c3527]/15"
+                  : "bg-gradient-to-r from-[#c89b4a] via-[#dfb66e] to-[#b38334] text-[#072118] font-bold hover:brightness-105 shadow-md"
               }`}
               id="cta-connect-btn"
             >
@@ -249,7 +249,7 @@ export default function Header({ language, setLanguage, onOpenContact, currentPa
                 setIsOpen(false);
                 onOpenContact("other");
               }}
-              className="w-full rounded-sm bg-slate-800 py-3 text-center text-sm font-semibold text-white mt-2 hover:bg-slate-700 transition"
+              className="w-full rounded-sm bg-gradient-to-r from-[#0c3527] via-[#134937] to-[#0c3527] py-3 text-center text-sm font-semibold text-white mt-2 hover:from-[#134937] hover:to-[#1a5e47] shadow-sm transition"
               id="mobile-cta-btn"
             >
               {t.contactLink}

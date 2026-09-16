@@ -1,18 +1,52 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-bg: #F9F9F7;
-  --color-brand-charcoal: #565656;
-  --color-brand-charcoal-dark: #3a3a3a;
-  --color-brand-charcoal-light: #707070;
-  --color-brand-maroon: #641E16;
-  --color-brand-maroon-hover: #82271d;
-  --color-brand-slate: #606060;
-  --color-slate-800: #606060;
-  --color-slate-900: #606060;
-  --color-slate-950: #606060;
-  --color-slate-700: #4d4d4d;
+  --color-brand-bg: #F8FAF8;
+  --color-brand-primary: #0c3527;
+  --color-brand-primary-dark: #072118;
+  --color-brand-primary-light: #16533e;
+  --color-brand-charcoal: #0c3527;
+  --color-brand-charcoal-dark: #072118;
+  --color-brand-charcoal-light: #144e39;
+  --color-brand-gold: #c89b4a;
+  --color-brand-gold-light: #dfb66e;
+  --color-brand-gold-dark: #9e752b;
+  --color-brand-maroon: #c89b4a;
+  --color-brand-maroon-hover: #dfb66e;
+  --color-brand-slate: #0c3527;
+  --color-slate-800: #0c3527;
+  --color-slate-900: #08261c;
+  --color-slate-950: #04160f;
+  --color-slate-700: #144434;
   --font-serif: "Georgia", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+@layer utilities {
+  .bg-theme-main {
+    background-color: #0c3527;
+  }
+  .bg-gradient-hero {
+    background: linear-gradient(180deg, #0c3527 0%, #092b1f 55%, #061e16 100%);
+  }
+  .bg-gradient-forest {
+    background: linear-gradient(135deg, #0c3527 0%, #124433 50%, #1b6349 100%);
+  }
+  .bg-gradient-gold {
+    background: linear-gradient(135deg, #c89b4a 0%, #e2be74 50%, #b38334 100%);
+  }
+  .bg-gradient-gold-subtle {
+    background: linear-gradient(135deg, rgba(200, 155, 74, 0.12) 0%, rgba(226, 190, 116, 0.18) 100%);
+  }
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #d8ac5c 0%, #f3d48d 40%, #e3be75 70%, #ba893a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gradient-forest {
+    background: linear-gradient(135deg, #0c3527 0%, #16533e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 @layer base {
